@@ -1,4 +1,4 @@
-image-service
+image-service [![Build Status](https://travis-ci.org/VladimirYushkevich/image-service.svg?branch=master)](https://travis-ci.org/VladimirYushkevich/image-service)[![codecov](https://codecov.io/gh/VladimirYushkevich/image-service/branch/master/graph/badge.svg)](https://codecov.io/gh/VladimirYushkevich/image-service)
 =
 ### Description:
 
