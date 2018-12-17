@@ -54,7 +54,7 @@ jacocoTestReport {
 check.dependsOn jacocoTestReport
 
 test {
-    if (System.properties['test.profile'] != 'docker') {
-        exclude '**/*IT*'
+    testLogging {
+        events "passed", "skipped", "failed"
     }
 }

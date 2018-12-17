@@ -1,0 +1,10 @@
+version: '3'
+services:
+  image-service:
+    image: com/fc/image-service
+    container_name: image-service
+    build: .
+    ports:
+      - 8888:8888
+    environment:
+      - JVM_OPTS=-Xmx12g -Xms12g -XX:MaxPermSize=8192m

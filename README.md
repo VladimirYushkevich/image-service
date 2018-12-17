@@ -1,4 +1,4 @@
-image-service
+image-service [![Build Status](https://travis-ci.org/VladimirYushkevich/image-service.svg?branch=master)](https://travis-ci.org/VladimirYushkevich/image-service)[![codecov](https://codecov.io/gh/VladimirYushkevich/image-service/branch/master/graph/badge.svg)](https://codecov.io/gh/VladimirYushkevich/image-service)
 =
 ### Description:
 
@@ -6,20 +6,21 @@ A prototype service to fetch and process this satellite data, with the goal of t
 standard RGB images that a human surveyor can look over.
 Documentation is provided in */docs* directory.
 
-### Important requirements
-
-This app uses *ImageMagick* utility. It suppose to be installed (Would be great to create a docker container for it).
-
 ### Run service:
 ```
-./gradlew clean build && java -jar build/libs/image-service-0.0.1-SNAPSHOT.jar
+docker-compose up
 ```
 
-### Notes (TODO)
-
-* Add docker compose with 2 containers for *image-service* and *ImageMagick*
-* Some parallelism can be be added (splitting large files on chunks)
-* Low coverage
+### Usage:
+```
+curl -X POST \
+  http://localhost:8888/images \
+  -H 'Content-Type: application/json' \
+  -d '{
+"granuleImages": "/33/U/UP/S2A_MSIL1C_20150704T101337_N0202_R022_T33UUP_20160606T205155.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_EPA__20160605T113933_A000162_T33UUP_N02.02/IMG_DATA",
+"channelMap": "waterVapor"
+}'
+```
 
 ### Environment
 macOS Sierra (version 10.12.6)  

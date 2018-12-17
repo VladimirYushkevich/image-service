@@ -30,6 +30,7 @@ public final class ImageMagick {
         resize.getCmdArgs().add(resizeFactorPercentage + "%");
         op.addImage(outputFileName);
         try {
+            log.debug("running: {}", op);
             cmd.run(op);
             log.info("applied magic to file '{}'", outputFileName);
             return true;
