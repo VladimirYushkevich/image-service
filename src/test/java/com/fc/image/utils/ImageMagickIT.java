@@ -4,13 +4,15 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.io.File;
 import java.nio.file.Paths;
 
 import static org.junit.Assert.assertTrue;
 
-public class ImageMagickTest {
+@ActiveProfiles({"test", "it"})
+public class ImageMagickIT {
 
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();

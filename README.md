@@ -19,6 +19,7 @@ This app uses *ImageMagick* utility. It suppose to be installed (Would be great 
 
 * Add docker compose with 2 containers for *image-service* and *ImageMagick*
 * Some parallelism can be be added (splitting large files on chunks)
+* Low coverage
 
 ### Environment
 macOS Sierra (version 10.12.6)  
